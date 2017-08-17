@@ -6,7 +6,7 @@ module.exports = function (context, eventHubMessages) {
     eventHubMessages.forEach(message => {
         context.log(`Processed message`, message);
 
-        if (message.success === 'True') {
+        if (message.success === true) {
             console.log("And it's a success!");
             return Promise.resolve(true);
         }
