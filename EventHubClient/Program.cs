@@ -29,7 +29,7 @@ namespace EventHubClientCaller
 
             var eventHubClient = Microsoft.Azure.EventHubs.EventHubClient.CreateFromConnectionString(connectionStringBuilder.ToString());
 
-            await SendMessagesToEventHub(eventHubClient, 5);
+            await SendMessagesToEventHub(eventHubClient, 50);
 
             await eventHubClient.CloseAsync();
 
