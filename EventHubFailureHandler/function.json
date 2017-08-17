@@ -5,8 +5,8 @@
       "type": "eventHubTrigger",
       "name": "eventHubMessages",
       "direction": "in",
-      "path": "samples-workitems",
-      "connection": "",
+      "path": "EventHubFailureTest",
+      "connection": "Endpoint=sb://modorevents.servicebus.windows.net/;SharedAccessKeyName=admin-policy;SharedAccessKey=iEfuirAViKCkxH05X1ft9K4HiLoQIU1n5AY4F0XuV4s=;EntityPath=the-roof-is-on-fire",
       "cardinality": "many"
     }
   ]
