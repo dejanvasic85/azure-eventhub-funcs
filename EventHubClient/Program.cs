@@ -44,9 +44,9 @@ namespace EventHubClientCaller
             {
                 try
                 {
-                    var failOrSucceed = i % 2 == 0;
+                    var failOrSucceed = i % 2 == 0 ? "true" : "false";
                     var id = Guid.NewGuid();
-                    var message = "{success : " + failOrSucceed + ", id: " + id.ToString() + "}";
+                    var message = "{'success' : " + failOrSucceed + ", 'id': '" + id.ToString() + "'}";
                     Console.WriteLine($"Sending message: {message}");
                     await eventHubClient.SendAsync(new EventData(Encoding.UTF8.GetBytes(message)));
                 }

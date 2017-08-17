@@ -4,13 +4,9 @@ module.exports = function (context, eventHubMessages) {
     const logger = context;
 
     eventHubMessages.forEach(message => {
-        logger.log('Parsing message', message);
-        
-        const data = JSON.parse(message);
+        context.log(`Processed message`, message);
 
-        context.log(`Processed message`, data);
-
-        if (data.success === 'True') {
+        if (message.success === 'True') {
             console.log("And it's a success!");
             return Promise.resolve(true);
         }
